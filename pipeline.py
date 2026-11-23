@@ -25,7 +25,10 @@ print(meteo_brute[0].keys()) # que contient le premier ?
 
 morceaux = []
 
-f
+for localisation in meteo_brute:
+   tableau = pd.DataFrame(localisation["daily"])
+   tableau["latitude"] = localisation["latitude"]
+   tableau["longitude"] = localisation["longitude"]
    morceaux.append(tableau)
 # Concaténation de tous les morceaux dans un grand DataFrame propre
 meteo = pd.concat(morceaux, ignore_index=True)
@@ -48,7 +51,11 @@ for fichier, libelle in etapes_avant:
     print(" [SQL]", libelle, "-", duree, "s")
 
 # chargement meteo dans table meteo_assurrisk
-ta
+tampon = io.StringIO()
+meteo.to_csv(tampon, index=False, header=False)
+tampon.seek(0)
+curseur.copy_expert("COPY meteo_assurrisk FROM STDIN WITH (FORMAT csv)", tampon)
+print(" [PYTHON]", len(meteo), "lignes de meteo chargees")
 
 #chargement villes_coordonnees_meteo.csv dans table ville coordonnées 
 

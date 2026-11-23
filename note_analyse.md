@@ -1,3 +1,5 @@
+Partie 1 — Le montant d’un sinistre L’observation (avec son chiffre), votre
+
  Les 30 villes de la table ont toutes le même type de sinistre le plus
 fréquent : le dégât des eaux.
 
@@ -415,8 +417,9 @@ confirmée (le Dégât des eaux domine globalement avec 29,1 % et
 conserve une part relativement régulière d'une ville à l'autre, entre 23,1 % et 34,8 %
 
 
+Partie 2 — Le type de sinistre le plus fréquent Idem : l’observation,
+l’explication, la vérification, la conclusion.
 
-Fiche n'enquete 2
 
 ┌──────────────────────────────────────────────────────┐
 │ 1. CE QUI M'ÉTONNE │
@@ -519,6 +522,10 @@ Sur quoi elle s'appuie : la vérification des précipitations (moyenne de 2,12 m
 Degré de confiance : moyen à élevé sur l'absence de catastrophe climatique généralisée sur la période, avec une réserve liée à la 
 couverture partielle d'octobre (arrêt au 28 octobre) et à la hauss
 Mercredi 18 novembre exercice 2
+
+Partie 3 — Octobre 2025 Idem, plus votre degré de confiance.
+
+Fiche d'enquete 3
 ┌──────────────────────────────────────────────────────┐
 │ 1. CE QUI M'ÉTONNE │
 │ l'observation, avec son chiffre │
@@ -562,7 +569,7 @@ Name: region_sinistre, dtype: object
 colonnes NULL
 0
 size
-<bound method GroupBy.size of <pandas.api.typing.DataFrameGroupBy object at 0x000001CD9EA8B130>>
+
 value counts
 region_sinistre       montant_estime
 Auvergne-Rhône-Alpes  5078.0            3
@@ -670,9 +677,14 @@ et la stabilité de montant_estime (describe(), min(), max()) d'une région à l
 Degré de confiance : élevé (il suffit d'ajouter un df.groupby("region_sinistre")["ville_sinistre"].nunique() pour afficher directement le 
 nombre de villes par région dans la case 4 et verrouiller la preuve).
 
-Jeudi 19 novembre 
+Partie 4 — Ce que la météo n’explique pas Cinq lignes, avec les trois
+corrélations que vous avez calculées mardi.
 └──────────────────────────────────────────────────────┘
-
+Les trois corrélations calculées mardi ([corrélation 1 : ex. précipitations / sinistres], [corrélation 2 : ex. température / sinistres], [corrélation 3 : ex. vent / sinistres]) montrent un lien limité avec le volume ou le coût des sinistres.
+Une corrélation faible ou modérée indique que les variables météorologiques seules ne suffisent pas à expliquer la majorité des événements déclarés.
+D’autres facteurs opérationnels, contractuels ou comportementaux (exposition des biens, ancienneté, saisonnalité hors météo, biais de déclaration) pèsent sur les résultats.
+Les données météo agrégées peuvent également lisser des phénomènes très localisés ou des extrêmes ponctuels non captés par la maille retenue.
+Il convient donc d’interpréter ces corrélations avec prudence et de croiser ces indicateurs avec d’autres variables métier avant toute décision.
 
 
 
