@@ -1,0 +1,27 @@
+AssurRisk — dossier de travail de la semaine 46
+================================================
+
+  rappel_22_octobre.py   le rappel du lundi matin. Il ne se connecte a RIEN :
+                         il tourne meme si votre installation est cassee.
+
+  sql/        les fichiers SQL. Trois sont les votres (briefs 8 et 10),
+              trois sont fournis. A NUMEROTER vous-memes mardi.
+  donnees/    le JSON de l'API (30 localisations) et le referentiel des villes.
+  sorties/    vide. Votre pipeline ecrira dedans.
+
+Vous creez pipeline.py a la racine de ce dossier, et vous le lancez
+DEPUIS ce dossier.
+
+Le fichier croisement_meteo.sql est fourni EN SECOURS : utilisez le
+votre, celui du brief 10, si vous l'avez.
+
+
+IMPORTANT — si la base assurrisk n'existe plus sur votre poste
+---------------------------------------------------------------
+Le script 01 recree toutes les TABLES, mais pas la BASE elle-meme.
+Si la connexion echoue avec "database assurrisk does not exist",
+creez-la d'abord. Dans DBeaver : clic droit sur la connexion
+PostgreSQL > Create > Database > nom : assurrisk.
+
+Tout le reste du dossier est autonome : vous n'avez besoin d'aucun
+fichier d'une semaine precedente.
