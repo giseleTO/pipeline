@@ -115,7 +115,7 @@ print("describe par jour octobre")
 par_jour = octobre.groupby(octobre["date_survenance"].dt.day).size()
 print(par_jour.describe())
 
-
+print("date_survenance de debut et fin octobre")
 print(octobre["date_survenance"].min(), octobre["date_survenance"].max())
 ##comparaison par region 
 print("repartition octobre")

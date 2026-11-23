@@ -1,3 +1,5 @@
+#ce script permet la creation des tables dans la base de données ASSURR et l'ajoute des données meteo
+
 import psycopg2
 import json
 import pandas as pd
@@ -5,8 +7,6 @@ import time
 from getpass import getpass
 import io
 import os
-
-
 
 mot_de_passe = getpass("Mot de passe PostgreSQL : ")
 connexion = psycopg2.connect(host="localhost", port=5432, dbname="ASSURR",
