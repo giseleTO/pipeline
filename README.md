@@ -4,7 +4,6 @@ Pour le lancer, place-toi dans le dossier du projet et active l'environnement vi
 Exécute ensuite `python pipeline.py` et saisis ton mot de passe PostgreSQL à l'invite `getpass`[cite: 28, 77].
 Le script `explorer.py` permet ensuite d'explorer la table `fact_sinistre_meteo` avec pandas et psycopg2[cite: 54].
 
-EXERCICE 3
 
 
 ### Première partie : Casser le code sans commiter, puis restaurer
